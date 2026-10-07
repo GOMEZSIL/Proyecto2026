@@ -1,0 +1,563 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+  }
+  /* --------ESTILOS GENERALES-------- */
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #f5f5f5;
+  }
+  .contenedor {
+    max-width: 1100px;
+    margin: 0 auto;          
+    padding: 0 20px;
+  }
+/* -----------HEADER------------ */
+  header {
+    background: #111;
+    color: white;
+    padding: 15px 0;
+  }
+
+  .barra-nav {
+    display: flex;
+    justify-content: space-between;  /* separa logo y menu a los extremos */
+    align-items: center;             /* los alinea a la misma altura */
+    flex-wrap: wrap;                 /* en pantallas chicas bajan de linea */
+    gap: 20px;
+  }
+
+  .logo img {
+    display: block;
+    max-width: 180px;
+    height: auto;
+  }
+
+  /* .logo span {
+    color: #FFD34D;          /* pintamos solo una parte del nombre 
+  }
+  */
+  /* ---------------MENU------------------- */
+
+  /* El menu tambien es flex: los <li> quedan en fila */
+  .menu {
+    display: flex;
+    gap: 25px;
+    list-style: none; 
+    flex-wrap: wrap;       
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;;
+  }
+
+  .menu a:hover {
+    color:#ffcc00;
+  }
+  .menu i {
+    margin-right: 5px;
+  }
+
+  /* ============================================================
+     3) HERO (banner de bienvenida)
+     ============================================================ */
+  .hero {
+  
+        background: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+    ),
+    url("https://placehold.co/1600x600/222222/FFFFFF?text=SpeedSport");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 110px 20px;
+  }
+  .hero-contenido {
+      max-width: 750px;
+      margin: auto;
+  }
+
+  .subtitulo {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #ffcc00;
+  }
+  .hero h1 {
+      font-size: 45px;
+      margin: 15px 0;
+  }
+
+  .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
+  /* -----------------BOTONES------------------- */
+
+  .boton {
+      display: inline-block;
+      background: #ffcc00;
+      color: #111;
+      padding: 12px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+  .boton:hover {
+      background: #e6b800;
+      transform: translateY(-2px);
+  }
+
+  /* -----------PRODUCTOS--------------- */
+  main {
+    padding-bottom: 50px;
+  }
+
+  .titulo-seccion {
+    text-align: center;
+    margin: 50px 0 310px;
+    font-size: 30px;
+  }
+  .descripcion-seccion {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  /* --------------GRILLA------------------ */
+  .grilla-productos {
+    display: flex;
+    flex-wrap: wrap;          
+    gap: 25px;               
+    justify-content: center;
+  }
+/* ---------------CARD--------------------- */
+  
+  .card {
+    flex: 0 1 320px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;        
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;   
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;        /* la imagen se recorta sin deformarse */
+    display: block;
+  }
+
+  .card-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;                  /* ocupa el espacio sobrante: cards parejas */
+  }
+
+  .categoria {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  .card h3 {
+    font-size: 19px;
+  }
+  .card p {
+    color: #666;
+  }
+
+  .precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+    margin-top: auto;         /* empuja el precio al fondo de la card */
+  }
+  /* ----------------BOTON PRODUCTO------------------ */
+
+  .card button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .card button:hover {
+    background:#ffcc00;
+    color: #111;
+  }
+  /* =========================================================
+   OFERTAS
+   ========================================================= */
+
+  .ofertas {
+      background: #ffcc00;
+
+      text-align: center;
+
+      margin-top: 60px;
+
+      padding: 50px 20px;
+  }
+
+  .ofertas h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+  }
+
+  .ofertas p {
+      margin-bottom: 20px;
+  }
+
+  .boton-claro {
+      background: #111;
+      color: white;
+  }
+
+  .boton-claro:hover {
+      background: #333;
+  }
+  /* =========================================================
+    CONTACTO
+    ========================================================= */
+
+  .contacto {
+      padding-bottom: 30px;
+  }
+
+  .bloque-contacto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+  }
+  /* DATOS */
+
+  .datos-contacto {
+      flex: 1 1 320px;
+
+      background: white;
+
+      border: 1px solid #ddd;
+
+      border-radius: 8px;
+
+      padding: 25px;
+  }
+  .datos-contacto h3 {
+    font-size: 21px;
+
+    margin-bottom: 20px;
+  }
+
+  .datos-contacto ul {
+      list-style: none;
+  }
+
+  .datos-contacto li {
+      padding: 9px 0;
+  }
+
+  .datos-contacto li i {
+      color: #111;
+
+      width: 25px;
+  }
+
+  .datos-contacto a {
+      color: #222;
+
+      text-decoration: none;
+  }
+
+  .datos-contacto a:hover {
+      color: #777;
+
+      text-decoration: underline;
+  }
+  /* MAPA */
+
+  .mapa {
+      flex: 1 1 420px;
+
+      min-height: 340px;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      border: 1px solid #ddd;
+  }
+
+  .mapa iframe {
+      width: 100%;
+      height: 100%;
+
+      min-height: 340px;
+
+      border: 0;
+
+      display: block;
+  }
+
+
+  /* =========================================================
+    CARRITO
+    ========================================================= */
+
+  .carrito {
+      background: white;
+
+      padding-bottom: 60px;
+  }
+
+  .carrito-vacio {
+      max-width: 600px;
+
+      margin: 30px auto;
+
+      padding: 40px;
+
+      text-align: center;
+
+      border: 1px solid #ddd;
+
+      border-radius: 8px;
+  }
+
+  .carrito-vacio i {
+      font-size: 45px;
+
+      margin-bottom: 15px;
+  }
+
+  .carrito-vacio p {
+      margin-bottom: 20px;
+
+      color: #666;
+  }
+
+
+  /* ============================================================
+     5) FOOTER
+     Otra vez flex: tres columnas que se acomodan solas.
+     ============================================================ */
+  footer {
+    background: #111;
+    color: #ddd;
+    padding: 45px 0 20px;
+  }
+
+  .footer-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .columna {
+    flex: 1 1 250px;          /* crece, se achica, base 250px */
+  }
+
+  .columna h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .columna ul {
+    list-style: none;
+  }
+  .columna li {
+      padding: 5px 0;
+  }
+
+  .columna i {
+      width: 22px;
+  
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+  }
+
+  .redes a:hover {
+      background: #ffcc00;
+
+      color: #111;
+  }
+
+  .copyright {
+      text-align: center;
+
+      border-top: 1px solid #333;
+
+      margin-top: 30px;
+
+      padding-top: 15px;
+
+      font-size: 14px;
+  }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+  @media (max-width: 768px) {
+
+      .barra-nav {
+          justify-content: center;
+      }
+
+      .menu {
+          justify-content: center;
+          gap: 15px;
+      }
+
+      .hero {
+          padding: 80px 20px;
+      }
+
+      .hero h1 {
+          font-size: 34px;
+      }
+
+      .hero p {
+          font-size: 17px;
+      }
+
+  }
+
+
+  @media (max-width: 480px) {
+
+      .menu {
+          flex-direction: column;
+
+          align-items: center;
+
+          gap: 10px;
+      }
+
+      .hero h1 {
+          font-size: 28px;
+      }
+
+      .titulo-seccion {
+          font-size: 25px;
+      }
+
+      .card {
+          flex-basis: 100%;
+      }
+
+  }
+
+  
+
+  /* ============================================================
+     6) SECCION DE CONTACTO
+     Otro flex: datos a un lado y el mapa al otro.
+     Con flex-wrap, en celular el mapa baja abajo de los datos.
+     ============================================================ 
+  .bloque-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  .datos-contacto {
+    flex: 1 1 320px;          /* crece, se achica, base 320px 
+    background: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 25px;
+  }
+
+  .datos-contacto h3 {
+    font-size: 18px;
+    color: #1F6F66;
+    margin-bottom: 10px;
+  }
+
+  .datos-contacto ul {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+
+  .datos-contacto li {
+    padding: 6px 0;
+  }
+
+  /* Los iconos quedan todos alineados a la misma distancia 
+  .datos-contacto li i {
+    color: #2F8F83;
+    width: 22px;
+  }
+
+  .datos-contacto a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  .datos-contacto a:hover {
+    color: #2F8F83;
+    text-decoration: underline;
+  }
+
+  .nota {
+    font-size: 13px;
+    color: #777;
+  }
+
+  /* El mapa: el iframe ocupa todo el ancho de su columna 
+  .mapa {
+    flex: 1 1 420px;
+    min-height: 340px;
+    border-radius: 8px;
+    overflow: hidden;         /* recorta el mapa a las esquinas redondeadas 
+
+     border: 1px solid #E0E0E0;
+  }
+
+  .mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: 0;                /* saca el borde gris que trae el iframe 
+
+     display: block;
+  }
+     */
